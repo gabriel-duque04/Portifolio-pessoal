@@ -1,8 +1,8 @@
 const express = require('express');
 const routes = express.Router();
 
-const { getUserByUsername } = require('../routes/githubRoutes.js');
+const { getUserRepoByUsername } = require('../controllers/githubController');
 
-routes.get('/repos/:username', getUserByUsername);
+routes.get('/repos/:username', getUserRepoByUsername);
 
-modeule.exports = routes;
+module.exports = routes;
