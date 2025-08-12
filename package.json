@@ -1,0 +1,25 @@
+{
+  "name": "portifolio-pessoal",
+  "version": "1.0.0",
+  "description": "Site para exibição dos meus projetos do github utilizando a api do github",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabriel-duque04/Portifolio-pessoal.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gabriel-duque04/Portifolio-pessoal/issues"
+  },
+  "homepage": "https://github.com/gabriel-duque04/Portifolio-pessoal#readme",
+  "dependencies": {
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0"
+  }
+}
