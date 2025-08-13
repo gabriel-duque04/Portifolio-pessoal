@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background: #f6f8fa; /* Fundo GitHub */
+    margin: 0;
+    color: #24292e; /* Texto padrão GitHub */
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: #ffffff; /* Fundo branco */
+    padding: 20px;
+    border-radius: 6px;
+    border: 1px solid #d0d7de; /* Borda sutil GitHub */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    margin-bottom: 20px;
+}
+
+header img {
+    border-radius: 50%;
+    width: 100px;
+}
+
+header p {
+    margin: 5px 0;
+    color: #57606a; /* Cinza de descrição GitHub */
+}
+
+.repo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.repo-card {
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 6px;
+    border: 1px solid #d0d7de;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.repo-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.repo-card a {
+    font-weight: 600;
+    text-decoration: none;
+    color: #0969da; /* Azul GitHub */
+}
+
+.repo-card a:hover {
+    text-decoration: underline;
+}
+
+.repo-card p {
+    margin-top: 8px;
+    font-size: 0.9em;
+    color: #57606a;
+}

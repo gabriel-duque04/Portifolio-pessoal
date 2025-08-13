@@ -4,48 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Perfil GitHub</title>
-    <style>
-        body { font-family: Arial, sans-serif; padding: 20px; }
-        img { border-radius: 50%; }
-        .repo { margin-bottom: 10px; }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Meu Perfil GitHub</h1>
-    <div id="profile"></div>
-    <h2>Repositórios</h2>
-    <div id="repos"></div>
-    
-
-    <script>
-        //fetch de dados do backend
-
-        async function fetchGitHub(){
-            //pega os dados e armazena nas variáveis
-            const response = await fetch('/api/main');
-            const data = await response.json();
-
-            //preenche a div do perfil 
-            const profileDiv = document.getElementById('profile');
-            profileDiv.innerHTML = `
-        <img src="${data.userData.avatar_url}" width="100">
-        <p><strong>${data.userData.name}</strong> (@${data.userData.login})</p>
-        <p>${data.userData.bio}</p>
-    `;
-
-            //preenche a div dos repositorios
-            const reposDiv = document.getElementById('repos');
-            data.reposData.forEach(repo => {
-                const repoEl = document.createElement('div');
-                repoEl.className = 'repo';
-                repoEl.innerHTML = `<a href="${repo.html_url}" target="_blank">${repo.name}</a> - ${repo.description || ''}`;
-                reposDiv.appendChild(repoEl);
-            });
-        }
-
-
-        //chamada da função
-        fetchGitHub();
-    </script>
+    <div class="container">
+        <header id="profile"></header>
+        <main>
+            <h2>Repositórios</h2>
+            <div id="repos" class="repo-grid"></div>
+        </main>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
