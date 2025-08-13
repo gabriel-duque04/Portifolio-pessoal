@@ -1,9 +1,9 @@
 body {
     font-family: Arial, sans-serif;
     padding: 20px;
-    background: #f6f8fa; /* Fundo GitHub */
+    background: #0D1B2A; /* Fundo Principal */
     margin: 0;
-    color: #24292e; /* Texto padrão GitHub */
+    color: #C8F5E1; /* Texto Principal */
 }
 
 .container {
@@ -15,22 +15,22 @@ header {
     display: flex;
     align-items: center;
     gap: 20px;
-    background: #ffffff; /* Fundo branco */
+    background: #1B263B; /* Fundo Secundário */
     padding: 20px;
-    border-radius: 6px;
-    border: 1px solid #d0d7de; /* Borda sutil GitHub */
-    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
     margin-bottom: 20px;
 }
 
 header img {
     border-radius: 50%;
     width: 100px;
+    border: 3px solid #9EF01A; /* Destaque */
 }
 
 header p {
     margin: 5px 0;
-    color: #57606a; /* Cinza de descrição GitHub */
+    color: #778DA9; /* Texto de Suporte */
 }
 
 .repo-grid {
@@ -40,23 +40,24 @@ header p {
 }
 
 .repo-card {
-    background: #ffffff;
+    background: #1B263B; /* Fundo Secundário */
     padding: 15px;
-    border-radius: 6px;
-    border: 1px solid #d0d7de;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
-    transition: transform 0.2s, box-shadow 0.2s;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    transition: transform 0.2s, box-shadow 0.2s, border 0.2s;
+    border: 2px solid transparent;
 }
 
 .repo-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    border: 2px solid #9EF01A; /* Destaque no hover */
 }
 
 .repo-card a {
-    font-weight: 600;
+    font-weight: bold;
     text-decoration: none;
-    color: #0969da; /* Azul GitHub */
+    color: #9EF01A; /* Cor de Destaque */
 }
 
 .repo-card a:hover {
@@ -66,5 +67,5 @@ header p {
 .repo-card p {
     margin-top: 8px;
     font-size: 0.9em;
-    color: #57606a;
+    color: #778DA9; /* Texto de Suporte */
 }

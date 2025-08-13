@@ -12,6 +12,10 @@ async function fetchGitHub() {
         <div>
             <p><strong>${data.userData.name}</strong> (@${data.userData.login})</p>
             <p>${data.userData.bio || ''}</p>
+            <p>${data.userData.email || ''}</p>
+            <p>Seguidores: ${data.userData.followers || ''}</p>
+            <p>Seguindo: ${data.userData.following || ''}</p>
+            <p>${data.userData.location || ''}</p>
         </div>
     `;
 
