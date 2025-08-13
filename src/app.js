@@ -1,12 +1,13 @@
 //importando o necessário
 require('dotenv').config();
-console.log(process.env.GITHUB_USER);
 const express = require('express');
+const path = require('path');
 
 
 
 //configuração de porta e inicialização do express
 const port = process.env.PORT || 3000;
+
 const app = express();
 
 app.listen(port, () =>{
@@ -16,6 +17,9 @@ app.listen(port, () =>{
 
 //rotas
 const githubRoutes = require('./routes/githubRoutes');
-app.use('/', githubRoutes);
+app.use('/api', githubRoutes);
 
 
+
+//express para servir o frontend
+app.use(express.static(path.join(__dirname, 'public')));

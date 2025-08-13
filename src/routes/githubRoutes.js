@@ -6,6 +6,6 @@ const { getUserRepoByUsername, getUserInfoByUsername, getRepoInfoByName, getMain
 routes.get('/repos/:username', getUserRepoByUsername);
 routes.get('/user/:username', getUserInfoByUsername);
 routes.get('/repos/:username/:repository', getRepoInfoByName);
-routes.get('/', getMainInfoByUsername);
+routes.get('/main', getMainInfoByUsername);
 
 module.exports = routes;
