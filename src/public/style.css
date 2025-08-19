@@ -32,6 +32,10 @@ header p {
     margin: 5px 0;
     color: #778DA9; /* Texto de Suporte */
 }
+.nome{
+    margin: 5px 0;
+    color: #9EF01A;
+}
 
 .repo-grid {
     display: grid;
@@ -68,4 +72,26 @@ header p {
     margin-top: 8px;
     font-size: 0.9em;
     color: #778DA9; /* Texto de Suporte */
+}
+
+/*MOBILE DO SITE*/
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header img {
+        width: 120px;
+        margin-bottom: 10px;
+    }
+
+    .repo-grid {
+        grid-template-columns: 1fr; /* Cada card ocupa 100% */
+    }
+
+    .repo-card {
+        width: 100%;
+    }
 }

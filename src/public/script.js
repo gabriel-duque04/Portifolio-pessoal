@@ -10,7 +10,7 @@ async function fetchGitHub() {
     profileDiv.innerHTML = `
         <img src="${data.userData.avatar_url}" alt="Avatar">
         <div>
-            <p><strong>${data.userData.name}</strong> (@${data.userData.login})</p>
+            <p class = 'nome'><strong>${data.userData.name}</strong> (@${data.userData.login})</p>
             <p>${data.userData.bio || ''}</p>
             <p>${data.userData.email || ''}</p>
             <p>Seguidores: ${data.userData.followers || ''}</p>
