@@ -4,11 +4,18 @@ body {
     background: #0D1B2A; /* Fundo Principal */
     margin: 0;
     color: #C8F5E1; /* Texto Principal */
+    overflow-x: hidden; /* evita scroll lateral */
+}
+
+html {
+    overflow-x: hidden;
 }
 
 .container {
     max-width: 900px;
     margin: auto;
+    padding: 0 10px; /* evita estourar a tela no mobile */
+    box-sizing: border-box;
 }
 
 header {
@@ -32,7 +39,8 @@ header p {
     margin: 5px 0;
     color: #778DA9; /* Texto de Suporte */
 }
-.nome{
+
+.nome {
     margin: 5px 0;
     color: #9EF01A;
 }
@@ -50,6 +58,8 @@ header p {
     box-shadow: 0 2px 8px rgba(0,0,0,0.3);
     transition: transform 0.2s, box-shadow 0.2s, border 0.2s;
     border: 2px solid transparent;
+    width: 100%; /* garante que não passe da tela */
+    box-sizing: border-box;
 }
 
 .repo-card:hover {
@@ -74,8 +84,7 @@ header p {
     color: #778DA9; /* Texto de Suporte */
 }
 
-/*MOBILE DO SITE*/
-
+/* MOBILE */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
@@ -88,7 +97,7 @@ header p {
     }
 
     .repo-grid {
-        grid-template-columns: 1fr; /* Cada card ocupa 100% */
+        grid-template-columns: 1fr; /* cada card ocupa 100% */
     }
 
     .repo-card {
